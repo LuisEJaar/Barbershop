@@ -1,0 +1,586 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background-color: white;
+}
+
+
+/******************************************
+/* LAYOUT - Header
+/*******************************************/
+
+@media screen and (max-width: 700px) {
+  .fullScreen, #menu {
+    display: none;
+  }
+
+  header {
+    overflow: hidden;
+    list-style: none;
+    position: fixed;
+    background: white;
+    width: 100%;
+    border: 1px solid grey;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+  
+  input:checked + .mobileNav {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+    border-top: 1px solid grey;
+  }
+
+  header form {
+    width: 100%;
+    float: left;
+  }
+
+  .mobileNav a:hover {
+    color: orange;
+  }
+
+  header > a {
+    position: fixed;
+    font-size: 3rem;
+    left: 40%;
+  }
+
+  header label {
+    font-size: 3rem;
+    margin-left: 20px;
+  }
+  
+  header nav li {
+    text-align: center;
+    margin-top: 1%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  body header nav li {
+    margin-left: 2%;
+    margin-top: 0;
+  }
+
+  header nav a {
+    font-size: .8rem;
+  }
+  body header nav {
+    width: 65%;
+  }
+}
+
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  .mobile {
+    display: none;
+  }
+
+  header {
+    overflow: auto;
+    list-style: none;
+  }
+  
+  header * {
+    float: left;
+    margin: 1% 0;
+    font-size: 0.9rem;
+  }
+  
+  header nav {
+    margin-left: 10%;
+    width: 70%;
+    font-size: 1rem;
+  }
+  
+  header nav + a {
+    float: right;
+    margin-right: 2%;
+  }
+  
+  header nav li {
+    margin-left: 5%;
+    margin-top: 0;
+  }
+}
+
+/******************************************
+/* LAYOUT - Filler Div
+/*******************************************/
+
+header + div {
+  height: 56px;
+  content: "";
+}
+
+/******************************************
+/* LAYOUT - Main
+/*******************************************/
+@media screen and (max-width: 700px) {
+  main {
+    background-image: url("../img/main.jpg");
+    background-repeat: no-repeat;
+    background-position: center -30px;
+    background-size: contain;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-right: 0;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  main p {
+    margin: 1% 0 6% 0;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  
+  main > span {
+    float: right;
+    transform: rotate(90deg);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: -16%;
+    margin-top: -15%;
+    letter-spacing: 1px;
+  }
+  
+  main > a, .momentum a, .advertSpace a {
+    color: white;
+    background-color: black;
+    padding: 1%;
+    margin-top: 20%;
+    font-size: 1.2rem;
+  }
+  
+  main > section {
+    font-size: 1.2rem;
+    background-color: black;
+    width: 50%;
+    padding: 2%;
+  }
+  
+  main section * {
+    display: block;
+    margin-bottom: 15%;
+  }
+  
+  main a + a {
+    margin-top: 8%;
+    display: block;
+    border-left: 2px solid white;
+    padding-left: 2%;
+    width: 50%
+  }
+  
+  main b {
+    display: inline;
+    font-size: 3rem;
+  }
+}
+
+@media  (min-width: 700px) and (max-width: 1100px) {
+  main > .times {
+    transform: rotate(0);
+    display: block;
+    float: none;
+    margin-bottom: 5%;
+  }
+
+  main > h1 {
+    font-size: 5rem;
+    margin: 0;
+  }
+
+  main .promoBox {
+    width: 32%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  main {
+    background-image: url("../img/main.jpg");
+    background-repeat: no-repeat;
+    background-position: center -150px;
+    background-size: cover;
+    min-height: 1600px;
+    padding-left: 15%;
+    padding-top: 20%;
+    padding-right: 0;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 7rem;
+    margin: 0;
+  }
+  
+  main p {
+    margin: 1% 0 6% 0;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+  }
+  
+  main > span {
+    float: right;
+    transform: rotate(90deg);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: -12%;
+    letter-spacing: 4px;
+  }
+  
+  main > a, .momentum a, .advertSpace a {
+    color: white;
+    background-color: black;
+    padding: 1%;
+    margin-top: 20%;
+    font-size: 1.2rem;
+  }
+  
+  main > section {
+    font-size: 1.2rem;
+    background-color: black;
+    width: 22%;
+    padding: 2%;
+  }
+  
+  main section * {
+    display: block;
+    margin-bottom: 15%;
+  }
+  
+  main a + a {
+    margin-top: 8%;
+    display: block;
+    border-left: 2px solid white;
+    padding-left: 2%;
+    width: 22%;
+  }
+  
+  main b {
+    display: inline;
+    font-size: 3rem;
+  }
+}
+
+/******************************************
+/* LAYOUT - Section 1 Service Overview
+/*******************************************/
+@media screen and (max-width: 700px) {
+  main + section {
+    min-height: 500px;
+    overflow: auto;
+  }
+  
+  main + section article {
+    display: block;
+    text-align: center;
+    margin: 5% 6.25%;
+    padding: 0 4%;
+    border-top: 1px solid grey;
+  } 
+
+  main + section article:last-child {
+    border-bottom: 1px solid grey;
+  }
+  
+  main + section h3 + p {
+    font-weight: 100;
+  }
+  
+  main + section img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  main + section {
+    min-height: 500px;
+    overflow: auto;
+  }
+  
+  main + section article {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-left: 6.25%;
+    padding: 0 4%;
+  } 
+  
+  main + section h3 + p {
+    font-weight: 100;
+  }
+  
+  main + section img {
+    width: 60%;
+  }
+}
+
+/******************************************
+/* LAYOUT - Section 2 Promo Video
+/*******************************************/
+
+@media screen and (max-width: 700px) {
+  .momentum {
+    background: rgb(243 244 246);
+    min-height: 300px;
+    padding: 5% 10%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .momentum * {
+    margin-bottom: 10%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  .momentum {
+    background: rgb(243 244 246);
+    min-height: 300px;
+    overflow: auto;
+    padding: 5% 15%;
+    font-size: 1.5rem;
+  }
+  
+  .momentum video {
+    float: right;
+    max-width: 50%;
+  }
+  
+  .momentum section {
+    float: left;
+    max-width: 50%;
+  }
+  
+  .momentum section * {
+    margin-bottom: 10%;
+  }
+}
+
+
+/******************************************
+/* LAYOUT - Section 3 Employee Highlight
+/*******************************************/
+@media screen and (max-width: 700px) {
+  .beauticians{
+    overflow: auto;
+    min-height: 300px;
+    text-align: center;
+    padding: 5% 15%;
+  }
+  
+  img {
+   max-width: 100%;
+  }
+  
+  .beauticians div {
+    background-color: black;
+    color: white;
+    padding: 1%;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    bottom: 30px;
+  
+  }
+  
+  div span, div h5 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  .beauticians{
+    overflow: auto;
+    min-height: 300px;
+    text-align: center;
+    padding: 5% 15%;
+  }
+  
+  .beauticians section {
+    float: left;
+    width: 25%;
+    margin-left: 3%
+  }
+  
+  img {
+   max-width: 100%;
+  }
+  
+  .beauticians section:first-child {
+    margin-left: 8%;
+  }
+  
+  .beauticians div {
+    background-color: black;
+    color: white;
+    padding: 1%;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    bottom: 30px;
+  
+  }
+  
+  div span, div h5 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}
+
+
+/******************************************
+/* LAYOUT - Section 4
+/*******************************************/
+@media screen and (max-width: 700px) {
+  .advertSpace {
+    min-height: 200px;
+    margin: 10% 0;
+  }
+  
+  .advertSpace section {
+    background: rgb(240 240 240);
+    background-image: url("../img/advertSpace.JPG");
+    background-repeat: no-repeat;
+    background-position: right 15%;
+    background-size: contain;
+    padding: 5% 6%;
+    font-size: 1rem;
+  }
+  .advertSpace p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  .advertSpace {
+    min-height: 400px;
+    margin: 3% 0 7% 0;
+    padding: 0 20%;
+  }
+  
+  .advertSpace section {
+    background: rgb(240 240 240);
+    min-height: 600px;
+    background-image: url("../img/advertSpace.JPG");
+    background-repeat: no-repeat;
+    background-position: right 15%;
+    background-size: contain;
+    padding-left: 6%;
+    padding-top: 15%;
+    font-size: 2rem;
+  }
+  
+  .advertSpace p {
+    font-size: 3rem;
+  }
+}
+
+/******************************************
+/* LAYOUT - Section 5 Image gallery
+/*******************************************/
+@media screen and (max-width: 700px) {
+  .imageGallery {
+    padding: 0 3%;
+    overflow: auto;
+  }
+  
+  .columns {
+    columns: 3;
+    background-color: white;
+    column-gap: 1%;
+  }
+  
+  .imageGallery section img {
+    display: block;
+    margin: 3%;
+  }
+  
+  .imageGallery span {
+    display: block;
+    width: 100%;
+    margin-bottom: 12%;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .imageGallery > section {
+    float: left;
+    max-width: 33.3%; 
+  }
+}
+
+@media (min-width: 700px) and (max-width: 9000px) {
+  .imageGallery {
+    padding: 0 20%;
+    overflow: auto;
+  }
+  
+  .columns {
+    columns: 3;
+    background-color: white;
+    column-gap: 1px;
+  }
+  
+  .imageGallery section img {
+    display: block;
+    margin: 3%;
+  }
+  
+  .imageGallery span {
+    display: block;
+    width: 100%;
+    margin-bottom: 12%;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .imageGallery > section {
+    float: left;
+    max-width: 30%; 
+  }
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
