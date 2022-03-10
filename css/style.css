@@ -196,14 +196,6 @@ header + div {
     margin-bottom: 10%;
   }
   
-  main > a, .momentum a, .advertSpace a {
-    color: white;
-    background-color: black;
-    padding: 1%;
-    margin-top: 20%;
-    font-size: 1.2rem;
-  }
-  
   main > section {
     font-size: 1.2rem;
     background-color: black;
@@ -260,14 +252,6 @@ header + div {
     letter-spacing: 4px;
   }
   
-  main > a, .momentum a, .advertSpace a {
-    color: white;
-    background-color: black;
-    padding: 1%;
-    margin-top: 20%;
-    font-size: 1.2rem;
-  }
-  
   main > section {
     font-size: 1.2rem;
     background-color: black;
@@ -315,27 +299,24 @@ header + div {
 
 @media screen and (max-width: 700px) {
   main + section {
-    height: 1200px;
+    height: 1700px;
   }
   
   main + section article {
     display: block;
     text-align: center;
-    margin: 5% 6.25%;
-    padding: 0 4%;
+    margin: 15% 6.25%;
+    padding: 2% 4%;
     border-top: 1px solid grey;
   } 
-
-  main + section article:last-child {
-    border-bottom: 1px solid grey;
-  }
   
   main + section h3 + p {
     font-weight: 100;
   }
   
   main + section img {
-    max-width: 50%;
+    object-fit: cover;
+    width: 50%;
   }
 }
 
@@ -359,7 +340,7 @@ header + div {
   }
   
   main + section img {
-    max-width: 50%;
+    object-fit: cover;
     height: 200px;
   }
 }
@@ -371,7 +352,7 @@ header + div {
 @media screen and (max-width: 700px) {
   .momentum {
     background: rgb(243 244 246);
-    min-height: 300px;
+    height: 900px;
     padding: 5% 10%;
     font-size: 1.5rem;
     text-align: center;
@@ -483,8 +464,14 @@ header + div {
 
 
 /******************************************
-/* LAYOUT - Section 4
+/* LAYOUT - Section 4 advertspace
 /*******************************************/
+.advertSpace a {
+  background-color: black;
+  color: white;
+  padding: 3px;
+}
+
 @media screen and (max-width: 700px) {
   .advertSpace {
     min-height: 200px;
@@ -501,6 +488,8 @@ header + div {
   .advertSpace p {
     font-size: 1.5rem;
   }
+
+  
 }
 
 @media (min-width: 700px) and (max-width: 9000px) {
@@ -524,6 +513,12 @@ header + div {
   
   .advertSpace p {
     font-size: 3rem;
+    width: 500px;
+  }
+
+  .advertSpace p, .advertSpace span {
+    background-color: black;
+    color: white;
   }
 }
 
