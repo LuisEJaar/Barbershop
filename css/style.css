@@ -201,6 +201,11 @@ main a + a {
   width: 50%
 }
 
+main b {
+  display: inline;
+  font-size: 3rem;
+}
+
 @media screen and (max-width: 700px) {
   main {
     background-position: center -30px;
@@ -221,11 +226,6 @@ main a + a {
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 10%;
-  }
-  
-  main b {
-    display: inline;
-    font-size: 3rem;
   }
 }
 
@@ -263,11 +263,6 @@ main a + a {
   main a + a {
     width: 22%;
   }
-  
-  main b {
-    display: inline;
-    font-size: 3rem;
-  }
 }
 
 @media  (min-width: 700px) and (max-width: 1100px) {
@@ -289,22 +284,25 @@ main a + a {
 /* LAYOUT - Section 1 Service Overview
 /*******************************************/
 
+main + section article {
+  display: block;
+  text-align: center;
+}
+
+main + section h3 + p {
+  font-weight: 100;
+}
+
 @media screen and (max-width: 700px) {
   main + section {
     height: 1700px;
   }
   
   main + section article {
-    display: block;
-    text-align: center;
     margin: 15% 6.25%;
     padding: 2% 4%;
     border-top: 1px solid grey;
   } 
-  
-  main + section h3 + p {
-    font-weight: 100;
-  }
   
   main + section img {
     object-fit: cover;
@@ -319,17 +317,12 @@ main a + a {
   }
   
   main + section article {
-    display: block;
     float: left;
     width: 25%;
-    text-align: center;
     margin-left: 6.25%;
     padding: 0 4%;
   } 
-  
-  main + section h3 + p {
-    font-weight: 100;
-  }
+
   
   main + section img {
     object-fit: contain;
@@ -340,15 +333,18 @@ main a + a {
 /******************************************
 /* LAYOUT - Section 2 Promo Video
 /*******************************************/
+.momentum {
+  background: rgb(243 244 246);
+  font-size: 1.5rem;
+}
 
 @media screen and (max-width: 700px) {
   .momentum {
-    background: rgb(243 244 246);
     height: 900px;
     padding: 5% 10%;
-    font-size: 1.5rem;
     text-align: center;
   }
+  
   .momentum * {
     margin-bottom: 10%;
   }
@@ -360,11 +356,9 @@ main a + a {
 
 @media (min-width: 700px) and (max-width: 9000px) {
   .momentum {
-    background: rgb(243 244 246);
     min-height: 300px;
     overflow: auto;
     padding: 5% 15%;
-    font-size: 1.5rem;
   }
   
   .momentum video {
@@ -386,40 +380,42 @@ main a + a {
 /******************************************
 /* LAYOUT - Section 3 Employee Highlight
 /*******************************************/
+.beauticians{
+  overflow: auto;
+  min-height: 300px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+ }
+
+ .beauticians div {
+  background-color: black;
+  color: white;
+  padding: 1%;
+  position: relative;
+  bottom: 30px;
+ }
+
+ div span, div h5 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
 @media screen and (max-width: 700px) {
   .beauticians{
-    overflow: auto;
-    min-height: 300px;
-    text-align: center;
     padding: 5% 15%;
   }
   
-  img {
-   max-width: 100%;
-  }
-  
   .beauticians div {
-    background-color: black;
-    color: white;
-    padding: 1%;
     width: 80%;
     margin-left: 10%;
-    position: relative;
-    bottom: 30px;
-  
-  }
-  
-  div span, div h5 {
-    font-size: 1.3rem;
-    margin: 0;
   }
 }
 
 @media (min-width: 700px) and (max-width: 9000px) {
   .beauticians{
-    overflow: auto;
-    min-height: 300px;
-    text-align: center;
     padding: 5% 6%;
   }
   
@@ -429,28 +425,13 @@ main a + a {
     margin-left: 3%
   }
   
-  img {
-   max-width: 100%;
-  }
-  
   .beauticians section:first-child {
     margin-left: 8%;
   }
   
   .beauticians div {
-    background-color: black;
-    color: white;
-    padding: 1%;
     width: 90%;
     margin-left: 5%;
-    position: relative;
-    bottom: 30px;
-  
-  }
-  
-  div span, div h5 {
-    font-size: 1.3rem;
-    margin: 0;
   }
 }
 
@@ -464,6 +445,10 @@ main a + a {
   padding: 3px;
 }
 
+.advertSpace section {
+  background: rgb(240 240 240);
+}
+
 @media screen and (max-width: 700px) {
   .advertSpace {
     min-height: 200px;
@@ -471,7 +456,6 @@ main a + a {
   }
   
   .advertSpace section {
-    background: rgb(240 240 240);
     background-image: none;
     padding: 5% 6%;
     font-size: 1rem;
@@ -480,8 +464,6 @@ main a + a {
   .advertSpace p {
     font-size: 1.5rem;
   }
-
-  
 }
 
 @media (min-width: 700px) and (max-width: 9000px) {
@@ -492,7 +474,6 @@ main a + a {
   }
   
   .advertSpace section {
-    background: rgb(240 240 240);
     min-height: 600px;
     background-image: url("../img/4895404.jpg");
     background-repeat: no-repeat;
@@ -517,17 +498,17 @@ main a + a {
 /******************************************
 /* LAYOUT - Section 5 Image gallery
 /*******************************************/
+.imageGallery span {
+  display: block;
+  width: 100%;
+  margin-bottom: 2.5%;
+  text-align: center;
+  font-size: 3rem;
+}
+
 @media screen and (max-width: 700px) {
   .imageGallery {
     padding: 0 1%;
-  }
-  
-  .imageGallery span {
-    display: block;
-    width: 100%;
-    margin-bottom: 12%;
-    text-align: center;
-    font-size: 3rem;
   }
 }
 
@@ -535,14 +516,6 @@ main a + a {
   .imageGallery {
     padding: 0 10%;
     height: 1000px;
-  }
-  
-  .imageGallery span {
-    display: block;
-    width: 100%;
-    margin-bottom: 2.5%;
-    text-align: center;
-    font-size: 3rem;
   }
 }
 
