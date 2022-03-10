@@ -166,54 +166,61 @@ header + div {
 /******************************************
 /* LAYOUT - Main
 /*******************************************/
+main {
+  background-image: url("../img/vintage-wooden-table-with-beard-shaping-salon-tools_freepik.jpg");
+  background-repeat: no-repeat;
+  background-size: cover ;
+  padding-right: 0;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+main > span {
+  font-weight: bold;
+}
+
+main p {
+  margin: 1% 0 6% 0;
+}
+
+main > section {
+  font-size: 1.2rem;
+  background-color: black;
+  width: 50%;
+  padding: 2%;
+}
+
+main a + a {
+  margin-top: 8%;
+  display: block;
+  border-left: 2px solid white;
+  padding-left: 2%;
+  width: 50%
+}
+
 @media screen and (max-width: 700px) {
   main {
-    background-image: url("../img/vintage-wooden-table-with-beard-shaping-salon-tools_freepik.jpg");
-    background-repeat: no-repeat;
     background-position: center -30px;
-    background-size: cover ;
     padding-left: 5%;
     padding-top: 10%;
-    padding-right: 0;
-    color: white;
   }
   
   h1 {
     font-size: 2rem;
-    margin: 0;
   }
   
   main p {
-    margin: 1% 0 6% 0;
     letter-spacing: 1px;
     font-size: 1rem;
   }
   
   main > span {
-    font-weight: bold;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 10%;
-  }
-  
-  main > section {
-    font-size: 1.2rem;
-    background-color: black;
-    width: 50%;
-    padding: 2%;
-  }
-  
-  main section * {
-    display: block;
-    margin-bottom: 15%;
-  }
-  
-  main a + a {
-    margin-top: 8%;
-    display: block;
-    border-left: 2px solid white;
-    padding-left: 2%;
-    width: 50%
   }
   
   main b {
@@ -224,39 +231,28 @@ header + div {
 
 @media (min-width: 700px) and (max-width: 9000px) {
   main {
-    background-image: url("../img/vintage-paper-with-beard-shaping-salon-tools_freepik.jpg");
-    background-repeat: no-repeat;
     background-position: center -150px;
-    background-size: cover;
     min-height: 1600px;
     padding-left: 15%;
     padding-top: 25%;
-    padding-right: 0;
-    color: white;
   }
   
   h1 {
     font-size: 7rem;
-    margin: 0;
   }
   
   main p {
-    margin: 1% 0 6% 0; 
     letter-spacing: 4px;
     font-size: 1.5rem;
   }
   
   main > span {
-    font-weight: bold;
     font-size: 1.5rem;
     letter-spacing: 4px;
   }
   
   main > section {
-    font-size: 1.2rem;
-    background-color: black;
     width: 22%;
-    padding: 2%;
   }
   
   main section * {
@@ -265,10 +261,6 @@ header + div {
   }
   
   main a + a {
-    margin-top: 8%;
-    display: block;
-    border-left: 2px solid white;
-    padding-left: 2%;
     width: 22%;
   }
   
@@ -340,7 +332,7 @@ header + div {
   }
   
   main + section img {
-    object-fit: cover;
+    object-fit: contain;
     height: 200px;
   }
 }
