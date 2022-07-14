@@ -13,14 +13,6 @@ li {
 }
 
 /******************************************
-/* BASE STYLES
-/*******************************************/
-
-body {
-  background-color: white;
-}
-
-/******************************************
 /* LAYOUT - Header
 /*******************************************/
 
@@ -43,7 +35,7 @@ header {
     overflow: auto;
     list-style: none;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     border: 1px solid grey;
     z-index: 5;
   }
@@ -109,24 +101,25 @@ header {
   }
 
   .leftOfLogo, .rightOfLogo {
-    margin-top: 1%;
-  }
-
-  .rightOfLogo {
-    float: right;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   header {
     height: 200px;
   }
 
-  .logo {
-    object-fit: contain;
+  .logo.fullScreen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
   }
 
   .logo img {
     width: 300px;
-    margin-left: 15%;
   }
 
   nav li {
@@ -135,8 +128,7 @@ header {
   }
 
   .booking{
-    position: absolute;
-    margin-left: auto;
+    width: 20%;
   }
 
 }
@@ -191,6 +183,11 @@ main > section {
   background-color: black;
   width: 50%;
   padding: 2%;
+}
+
+main > a:last-of-type {
+  padding-top: 5px;
+  background-color: black;
 }
 
 main a + a {
